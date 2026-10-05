@@ -1,0 +1,44 @@
+dockerfile > images > run to create containers
+
+dockerfile reference: https://docs.docker.com/reference/dockerfile/
+
+#images cannot be edited, rather you have to change dockerfile
+
+installed docker:       # it is an interview question.
+1. docker engine        # it is an interview question.
+2. container D          # it is an interview question.
+3. RunC                 # it is an interview question.
+
+
+
+acr: azure container registry       #it is a docker hub, only accesible with account credintials
+how to create a new container registry 
+1. open Azure portal and search for container registries
+2. subscription is pay as you go
+
+
+az cli software : https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli#install-or-update
+
+
+how to log in to acr :
+az acr login --name <acrname>
+
+image is recognised by repository and tagd
+
+
+
+
+dockerfile repository  in vs code terminal:
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install vim -y
+RUN apt-get install nginx -y
+RUN rm /var/www/html/*
+WORKDIR /var/www/html/
+RUN echo "<h1> learning images </h1>" > index.html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+
+what we have done:
+using dockerfile we create composition for our image.

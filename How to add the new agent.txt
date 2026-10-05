@@ -1,0 +1,45 @@
+Go to your Project in Azure -> Project Settings (Left Nav)  
+
+Agent Pools -> Choose "Default" Pool -> Agents -> New Agent -> Download
+
+Create a dir c:/agents -> Extract the downloaded file and paste here
+
+Open cmd (admin) -> Go to the above directory -> .\config.cmd
+
+Server URL => https://....OrganizationName/
+
+PAT => Enter
+
+To get a PAT (In Azure -> User Settings -> PAT -> New Token (Full Access))
+
+Agent Name => Any Name or PC Name
+
+work folder => enter
+
+service => Y
+
+service_sid => N
+
+Network Service => enter
+
+start immediately => Y
+
+ 
+
+On your PC Go To Services -> Search for Azure -> Start the Agent
+
+Now in your Default pool in Azure you can see your Agent.
+
+In your CI/CD pipeline make sure you change the Configuration to
+
+pool: Default
+
+If the above cmd doesn't work try -> 
+
+pool:
+
+  name: Default
+
+  demands:
+
+   - agent.name -equals BOOK-MQU75LM1HT

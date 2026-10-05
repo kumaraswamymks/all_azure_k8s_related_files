@@ -1,0 +1,20 @@
+YAML - you get more control on what you need to put in.
+
+https://www.yamllint.com  # to check for errors in YAML script
+
+
+create a new project
+
+create a repository
+on the drop down menu click new repository. the repository will be generated
+click on pipeline, create pipeline, select your code as azure repos git.
+your project name, click on it.
+click on starter pipeline.
+
+YAML file is divided into 2 parts
+1. Header : 
+2.  :
+
+Variables are of 2 types.
+1. User defined
+2. System defined

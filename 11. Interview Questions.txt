@@ -1,0 +1,5 @@
+Interview Questions:
+
+Concept of Trigger in Header
+
+what is the difference between para virtualisation and virtualisation?

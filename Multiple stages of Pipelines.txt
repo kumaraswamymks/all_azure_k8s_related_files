@@ -1,0 +1,28 @@
+multiple stages for pipelines:
+build > test > deploy > release
+
+trigger:
+- main
+
+variables:
+abc : 123
+
+pool:
+ vmImage: ubuntu-latest # this is the global pool
+
+stages:
+- stage: build
+  Jobs:
+  - job: buildjob
+	steps:
+	  step1:
+	  step2:
+    pool;
+      vmImage: windows-2019 # only for this pool, this windows-2019 is used or else global pool is used
+  -job: buildjob1
+
+- stage: test
+
+- stage deploy
+
+- stage: release
